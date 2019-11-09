@@ -36,7 +36,7 @@ public class Cell extends JButton {
 	}
 
 	public String toString() {
-		String toReturn = new String("");
+		/*String toReturn = new String("");
 		String currentState = getText();
 		for (int j = 0; j < _maxSize; j++) {
 			toReturn += currentState;
@@ -45,7 +45,11 @@ public class Cell extends JButton {
 			return toReturn.substring(0, 1);
 		} else {
 			return ".";
-		}
+		}*/
+		if(getAlive())
+			return "X";
+		else
+			return ".";
 
 	}
 
