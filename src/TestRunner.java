@@ -10,7 +10,10 @@ public class TestRunner {
 		boolean anyFailures = false;
 
 		// ADD ANY CLASSES YOU WISH TO TEST HERE
-
+		classesToTest.add(MainPanelTest.class);
+		classesToTest.add(CellTest.class);
+		
+	
 		// For all test classes added, loop through and use JUnit
 		// to run them.
 
@@ -36,11 +39,12 @@ public class TestRunner {
 		}
 
 		// After completion, notify user if all tests passed or any failed.
-
 		if (anyFailures) {
 			System.out.println("\n!!! - At least one failure, see above.");
 		} else {
 			System.out.println("\nALL TESTS PASSED");
 		}
+		
+		
 	}
 }

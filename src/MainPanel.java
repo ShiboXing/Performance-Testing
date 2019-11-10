@@ -1,5 +1,8 @@
 import java.awt.*;
 import javax.swing.*;
+
+import org.mockito.internal.stubbing.answers.ThrowsException;
+
 import java.util.*;
 
 public class MainPanel extends JPanel {
@@ -29,8 +32,8 @@ public class MainPanel extends JPanel {
 	public Cell[][] getCells() {
 		return _cells;
 	}
-
-	private int convertToInt(int x) {
+                                                    
+	private int convertToInt(int x) throws NumberFormatException {
 		/*
 		int c = 0;
 		String padding = "0";
@@ -43,6 +46,9 @@ public class MainPanel extends JPanel {
 		String n = padding + String.valueOf(x);
 		int q = Integer.parseInt(n);
 		return q;*/
+		if (x<0)
+			throw new NumberFormatException();
+		
 		return x;
 	}
 
