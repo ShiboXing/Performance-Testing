@@ -48,7 +48,6 @@ public class MainPanel extends JPanel {
 		return q;*/
 		if (x<0)
 			throw new NumberFormatException();
-		
 		return x;
 	}
 
@@ -249,17 +248,18 @@ public class MainPanel extends JPanel {
 		_running = true;
 		while (_running) {
 			System.out.println("Running...");
-			int origR = _r;
-			/*
+			//int origR = _r;
+			
 			try {
 				Thread.sleep(20);
 			} catch (InterruptedException iex) {
-			}*/
+			}
+			/*
 			for (int j = 0; j < _maxCount; j++) {
 				_r += (j % _size) % _maxCount;
 				_r += _maxCount;
 			}
-			_r = origR;
+			_r = origR;*/
 			backup();
 			calculateNextIteration();
 		}
